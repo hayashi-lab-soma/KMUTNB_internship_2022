@@ -1,16 +1,18 @@
 import React, { Component } from "react";
-import { Alert } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Config from "../scripts/config";
 
-class ConnectionXArm extends Component {
+class XArmPickUp extends Component {
     state = {
         connected: false,
-        ros: null
+        ros: null,
+        isToggleOn:true,
     };
 
     constructor () {
         super ();
         this.init_connection();
+        this.handleClick = this.handleClick.bind(this);
     }
 
     init_connection () {
@@ -41,7 +43,7 @@ class ConnectionXArm extends Component {
                         ":" + 
                         Config.XARM_ROSBRIDGE_SERVER_PORT + ""
                     );
-                    console.log("connection problem")
+                    console.log("connection problem");
                 }
             }, Config.RECONNECTION_TIMER);
         });
@@ -53,24 +55,38 @@ class ConnectionXArm extends Component {
                 ":" + 
                 Config.XARM_ROSBRIDGE_SERVER_PORT + ""
             );
-            console.log("xarm established"+Config.XARM_ROSBRIDGE_SERVER_IP);
         } catch(error) {
-            console.log("connection problem")
-            console.log("xarm unestablished"+Config.XARM_ROSBRIDGE_SERVER_IP);
+            console.log("connection problem");
         }
+    }
+
+    handleClick() {
+        this.setState(prevState =>({
+            isToggleOn: !prevState.isToggleOn
+        }));
+
+        //publish xarm_toggle Topic
+        var xarm_toggle = new window.ROSLIB.Topic({
+            ros: this.state.ros,
+            name: Config.XARM_TOGGLE_TOPIC,
+            messageType: "std_msgs/Bool"
+        });
+        var bool = new window.ROSLIB.Message({
+            data: this.state.isToggleOn
+        });
+        xarm_toggle.publish(bool);
+
+        console.log("published xarm_toggle Topic"+ this.state.isToggleOn);
     }
 
     render() {
         return (
-            <div>
-                <Alert className="text-center m-3"
-                variant={this.state.connected? "success" : "danger"}>
-                    {this.state.connected? "Xarm Connected": "XArm Disconnected"}
-                </Alert>
-            </div>
+                <Button variant="outline-primary"
+                        onClick={this.handleClick}>
+                    Pick Up Object
+                </Button>
         );
     }
-  
 }
 
-export default ConnectionXArm;
+export default XArmPickUp;
