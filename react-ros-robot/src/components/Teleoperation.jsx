@@ -110,7 +110,7 @@ class Teleoperation extends Component {
 
     render () {
         return(
-            <div>
+            <div className="ml-3">
                 <Joystick size={100} 
                         sticky={false} 
                         baseColor="#EEEEEE" 

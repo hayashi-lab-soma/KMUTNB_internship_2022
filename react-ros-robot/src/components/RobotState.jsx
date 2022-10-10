@@ -129,13 +129,13 @@ class RobotState extends Component {
             <div>
                 <Row>
                     <Col>
-                        <h5 className="mt-3">Position</h5>
-                        <p className="pt-0">x: {this.state.x} m</p>
-                        <p className="pt-0">y: {this.state.y} m</p>
-                        <p className="pt-0">Orientation: {this.state.orientation} deg</p>
+                        <h5 className="mt-4 ml-3">Position</h5>
+                        <p className="pt-0 pl-3">x: {this.state.x} m</p>
+                        <p className="pt-0 pl-3">y: {this.state.y} m</p>
+                        <p className="pt-0 pl-3">Orientation: {this.state.orientation} deg</p>
                     </Col>
                     <Col>
-                        <h5 className="mt-3">Velocities</h5>
+                        <h5 className="mt-4">Velocities</h5>
                         <p className="mt-0">
                             Linear: {this.state.linear_velocity} m/s
                         </p>
@@ -146,8 +146,8 @@ class RobotState extends Component {
                 </Row>
                 <Row>
                     <Col>
-                        <h5 className="mt-0">Sonar</h5>
-                        <p className="mt-0">
+                        <h5 className="mt-1 ml-3">Sonar</h5>
+                        <p className="mt-0 ml-3">
                             Sonar distance: {this.state.sonar_distance} cm
                         </p>
                     </Col>

@@ -40,7 +40,7 @@ class Home extends Component {
                             <RobotState />
                         </Col>
                         <Col>
-                            <h4 className="mt-2">MAP</h4>
+                            <h4 className="mt-3 ml-3">MAP</h4>
                             <Map></Map>
                         </Col>
                     </Row>
