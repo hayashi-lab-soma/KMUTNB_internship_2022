@@ -64,7 +64,7 @@ class Map extends Component {
     view_map() {
         var viewer = new window.ROS2D.Viewer({
             divID: "nav_div",
-            width: 480,
+            width: 500,
             height: 400,
         });
         
@@ -80,7 +80,8 @@ class Map extends Component {
 
     render() {
         return <div>
-            <div id= "nav_div"></div>
+            <div id= "nav_div"
+            className="ml-3"></div>
         </div>;
     }
 }

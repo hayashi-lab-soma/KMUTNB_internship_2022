@@ -44,6 +44,7 @@ class Home extends Component {
                             {/* <XArmCamera /> */}
                         </Col>
                         <Col>
+                            <h4 className="mt-2">MAP</h4>
                             <Map></Map>
                         </Col>
                     </Row>
