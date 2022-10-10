@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Config from "../scripts/config";
 import { Row } from "react-bootstrap";
 
-class Camera extends Component {
+class XArmCamera extends Component {
     state = {
         ros: null,
     }
@@ -29,16 +29,16 @@ class Camera extends Component {
                 try {
                     this.state.ros.connect(
                         "ws://" + 
-                        Config.ROSBRIDGE_SERVER_IP + 
+                        Config.XARM_ROSBRIDGE_SERVER_IP + 
                         ":" + 
-                        Config.ROSBRIDGE_SERVER_PORT + ""
+                        Config.XARM_ROSBRIDGE_SERVER_PORT + ""
                     );
                 } catch(error) {
                     console.log(
                         "ws://" + 
-                        Config.ROSBRIDGE_SERVER_IP + 
+                        Config.XARM_ROSBRIDGE_SERVER_IP + 
                         ":" + 
-                        Config.ROSBRIDGE_SERVER_PORT + ""
+                        Config.XARM_ROSBRIDGE_SERVER_PORT + ""
                     );
                     console.log("connection problem")
                 }
@@ -48,9 +48,9 @@ class Camera extends Component {
         try {
             this.state.ros.connect(
                 "ws://" + 
-                Config.ROSBRIDGE_SERVER_IP + 
+                Config.XARM_ROSBRIDGE_SERVER_IP + 
                 ":" + 
-                Config.ROSBRIDGE_SERVER_PORT + ""
+                Config.XARM_ROSBRIDGE_SERVER_PORT + ""
             );
         } catch(error) {
             console.log("connection problem")
@@ -65,7 +65,7 @@ class Camera extends Component {
     getCameraImage() {
         var image_subscriber = new window.ROSLIB.Topic({
             ros:this.state.ros,
-            name: Config.CAMERA_TOPIC,
+            name: Config.XARM_CAMERA_TOPIC,
             messageType: "sensor_msgs/CompressedImage",
         })
 
@@ -79,7 +79,7 @@ class Camera extends Component {
     render() {
         return (
             <div>
-                <h4 className="mt-2">Turtlebot Camera</h4>
+                <h4 className="mt-2">XArm Camera</h4>
             
                 <img id="image_sub" 
                     src={require('./placeholder.png')}
@@ -92,4 +92,4 @@ class Camera extends Component {
     }
 }
 
-export default Camera;
+export default XArmCamera;
