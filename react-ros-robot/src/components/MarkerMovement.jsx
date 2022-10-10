@@ -83,7 +83,7 @@ class MarkerMovement extends Component {
         return (
                 <Button variant="outline-primary"
                         onClick={this.handleClick}>
-                    MarkerMovement
+                    Return Home Position
                 </Button>
         );
     }

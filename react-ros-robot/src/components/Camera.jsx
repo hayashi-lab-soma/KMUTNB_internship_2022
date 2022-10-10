@@ -79,7 +79,7 @@ class Camera extends Component {
     render() {
         return (
             <div>
-                <h4 className="mt-2">Camera</h4>
+                <h4 className="mt-2">Turtlebot Camera</h4>
             
                 <img id="image_sub" 
                     src={require('./placeholder.png')}

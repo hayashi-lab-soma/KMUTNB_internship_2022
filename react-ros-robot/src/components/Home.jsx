@@ -1,12 +1,14 @@
 import React, { Component } from "react";
+import { Row, Col, Container } from "react-bootstrap";
 import Connection from "./Connection";
-import ConnectionXArm from "./ConnectionXArm";
+import ConnectionXArm from "./XArmConnection";
 import Teleoperation from "./Teleoperation";
 import RobotState from "./RobotState";
 import Map from "./Map";
 import Camera from "./Camera";
 import MarkerMovement from "./MarkerMovement";
-import { Row, Col, Container } from "react-bootstrap";
+import XArmPickUp from "./XArmPickUp";
+import XArmCamera from "./XArmCamera";
 
 class Home extends Component {
     state = {
@@ -16,8 +18,8 @@ class Home extends Component {
         return (
             <div>
                 <Container>
-                    <h1 className="text-center mt-3">Robot Control Page</h1>
-                    <Row>
+                    <h1 className="text-center mt-3">Turtlebot Control Page</h1>
+                    <Row className="mb-3">
                             <Col>
                                 <Connection></Connection>
                             </Col>
@@ -31,40 +33,20 @@ class Home extends Component {
                             <Teleoperation></Teleoperation>
                         </Col>
                         <Col>
-                            <MarkerMovement /> 
+                            <MarkerMovement />
+                            <XArmPickUp />
                         </Col>
                     </Row>
                     <Row>
                         <Col>
                             <Camera />
                             <RobotState />
+                            {/* <XArmCamera /> */}
                         </Col>
                         <Col>
-                            <h4 className="mt-2">MAP</h4>
                             <Map></Map>
                         </Col>
                     </Row>
-
-                    {/* <h1 className="text_center mt-3">Robot Control Page</h1>
-                    <Col>
-                            <Connection></Connection>
-                    </Col>
-                    <Col>
-                        <Col>          
-                            <Teleoperation></Teleoperation>
-                        </Col>
-                        <Row>
-                            <Col>
-                                <Camera />
-                                <RobotState />
-                            </Col>
-                            <Col>          
-                                <h4>MAP</h4>
-                                <Map></Map>
-                            </Col>
-                        </Row>
-                    </Col> */}
-
                 </Container>
              
             </div>
