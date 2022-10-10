@@ -83,7 +83,7 @@ class MarkerMovement extends Component {
         return (
                 <Button variant="outline-primary"
                         onClick={this.handleClick}
-                        className="text-center ml-2 mt-3">
+                        className="text-center mt-3">
                     Return Home Position
                 </Button>
         );
