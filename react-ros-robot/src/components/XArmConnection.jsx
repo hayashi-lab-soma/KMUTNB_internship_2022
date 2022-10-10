@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Alert } from "react-bootstrap";
 import Config from "../scripts/config";
 
-class Connection extends Component {
+class XArmConnection extends Component {
     state = {
         connected: false,
         ros: null
@@ -30,16 +30,16 @@ class Connection extends Component {
                 try {
                     this.state.ros.connect(
                         "ws://" + 
-                        Config.ROSBRIDGE_SERVER_IP + 
+                        Config.XARM_ROSBRIDGE_SERVER_IP + 
                         ":" + 
-                        Config.ROSBRIDGE_SERVER_PORT + ""
+                        Config.XARM_ROSBRIDGE_SERVER_PORT + ""
                     );
                 } catch(error) {
                     console.log(
                         "ws://" + 
-                        Config.ROSBRIDGE_SERVER_IP + 
+                        Config.XARM_ROSBRIDGE_SERVER_IP + 
                         ":" + 
-                        Config.ROSBRIDGE_SERVER_PORT + ""
+                        Config.XARM_ROSBRIDGE_SERVER_PORT + ""
                     );
                     console.log("connection problem")
                 }
@@ -49,21 +49,23 @@ class Connection extends Component {
         try {
             this.state.ros.connect(
                 "ws://" + 
-                Config.ROSBRIDGE_SERVER_IP + 
+                Config.XARM_ROSBRIDGE_SERVER_IP + 
                 ":" + 
-                Config.ROSBRIDGE_SERVER_PORT + ""
+                Config.XARM_ROSBRIDGE_SERVER_PORT + ""
             );
+            console.log("xarm established"+Config.XARM_ROSBRIDGE_SERVER_IP);
         } catch(error) {
             console.log("connection problem")
+            console.log("xarm unestablished"+Config.XARM_ROSBRIDGE_SERVER_IP);
         }
     }
 
     render() {
         return (
             <div>
-                <Alert className="text-center mt-2"
+                <Alert className="text-center m-2"
                 variant={this.state.connected? "success" : "danger"}>
-                    {this.state.connected? "Turtlebot3 Connected": "Turtlebot3 Disconnected"}
+                    {this.state.connected? "Xarm Connected": "XArm Disconnected"}
                 </Alert>
             </div>
         );
@@ -71,4 +73,4 @@ class Connection extends Component {
   
 }
 
-export default Connection;
+export default XArmConnection;
