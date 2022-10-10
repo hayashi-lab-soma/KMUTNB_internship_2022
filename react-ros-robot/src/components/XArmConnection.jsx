@@ -63,7 +63,7 @@ class XArmConnection extends Component {
     render() {
         return (
             <div>
-                <Alert className="text-center m-3"
+                <Alert className="text-center mt-2"
                 variant={this.state.connected? "success" : "danger"}>
                     {this.state.connected? "Xarm Connected": "XArm Disconnected"}
                 </Alert>

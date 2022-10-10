@@ -83,9 +83,8 @@ class Camera extends Component {
             
                 <img id="image_sub" 
                     src={require('./placeholder.png')}
-                    width="400"
-                    height="260"
-                    className="ml-3">   
+                    width="360"
+                    height="200">   
                 </img>
             </div>
 

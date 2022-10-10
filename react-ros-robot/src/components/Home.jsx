@@ -16,6 +16,7 @@ class Home extends Component {
 
     render() {
         return (
+            
             <div>
                 <Container>
                     <h1 className="text-center mt-3">Turtlebot Control Page</h1>
@@ -24,17 +25,15 @@ class Home extends Component {
                                 <Connection></Connection>
                             </Col>
                             <Col>
-                                <ConnectionXArm></ConnectionXArm>
-                            </Col>
-                            
+                                <XArmConnection></XArmConnection>
+                            </Col>  
                     </Row>
                     <Row>
                         <Col>          
                             <Teleoperation></Teleoperation>
                         </Col>
                         <Col>
-                            <MarkerMovement />
-                            <XArmPickUp />
+                            <MarkerMovement /> 
                         </Col>
                     </Row>
                     <Row>
