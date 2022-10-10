@@ -17,10 +17,15 @@ class Home extends Component {
             <div>
                 <Container>
                     <h1 className="text-center mt-3">Robot Control Page</h1>
-                    <Col>
-                            <Connection></Connection>
-                            <ConnectionXArm></ConnectionXArm>
-                    </Col>
+                    <Row>
+                            <Col>
+                                <Connection></Connection>
+                            </Col>
+                            <Col>
+                                <ConnectionXArm></ConnectionXArm>
+                            </Col>
+                            
+                    </Row>
                     <Row>
                         <Col>          
                             <Teleoperation></Teleoperation>
