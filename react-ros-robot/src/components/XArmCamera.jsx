@@ -66,6 +66,7 @@ class XArmCamera extends Component {
             ros:this.state.ros,
             name: Config.XARM_CAMERA_TOPIC,
             messageType: "sensor_msgs/CompressedImage",
+            // messageType: "sensor_msgs/Image",
         })
 
         image_subscriber.subscribe((message)=>{

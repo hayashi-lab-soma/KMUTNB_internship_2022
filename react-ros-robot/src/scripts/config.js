@@ -13,7 +13,8 @@ const Config = {
   POSE_TOPIC: "/amcl_pose",
   // CAMERA_TOPIC: "/camera/rgb/image_raw/compressed",
   CAMERA_TOPIC: "/camera/image/compressed",
-  XARM_CAMERA_TOPIC: "/stereo_inertial_publisher/color/image/compressed",
+  // XARM_CAMERA_TOPIC: "/stereo_inertial_publisher/color/image/compressed",
+  XARM_CAMERA_TOPIC: "/detectedImage_decompressed/compressed",
   SONAR_TOPIC: "/sonar",
 };
 
