@@ -77,8 +77,7 @@ class GoPickUpPos extends Component {
     render() {
         return (
                 <Button variant="outline-primary"
-                        onClick={this.handleClick}
-                        className="text-center mt-3">
+                        onClick={this.handleClick}>
                     Pick Up Position
                 </Button>
         );

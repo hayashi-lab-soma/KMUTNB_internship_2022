@@ -19,22 +19,26 @@ class Home extends Component {
             
             <div>
                 <Container>
-                    <h1 className="text-center mt-3">Turtlebot3 Control Page</h1>
-                    <Row className="mb-3">
-                        <Col>
+                    <h1 className="text-center mt-2">Turtlebot3 Control Page</h1>
+                    <Row>
+                        <Col className="text-center mt-2">
                             <Connection></Connection>
                         </Col>
-                        <Col>
+                        <Col className="text-center mt-2">
                             <XArmConnection></XArmConnection>
                         </Col>  
                     </Row>
                     <Row>
                         <Col>          
-                            <Teleoperation></Teleoperation>
+                            <Teleoperation />
                         </Col>
-                        <Col>
+                        <Col className="mt-4">
                             <MarkerMovement />
+                        </Col>
+                        <Col className="mt-4">
                             <GoPickUpPos /> 
+                        </Col>
+                        <Col className="mt-4">
                             <GoDeliveryPos /> 
                         </Col>
                     </Row>
