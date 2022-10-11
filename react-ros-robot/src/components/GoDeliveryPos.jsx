@@ -77,8 +77,7 @@ class GoDeliveryPos extends Component {
     render() {
         return (
                 <Button variant="outline-primary"
-                        onClick={this.handleClick}
-                        className="text-center mt-3">
+                        onClick={this.handleClick}>
                     Delivery Position
                 </Button>
         );
