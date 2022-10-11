@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Row, Col, Container, Button } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Config from "../scripts/config";
 import * as Three from "three";
 

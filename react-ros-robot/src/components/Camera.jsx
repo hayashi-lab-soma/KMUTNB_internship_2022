@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Config from "../scripts/config";
-import { Row } from "react-bootstrap";
 
 class Camera extends Component {
     state = {

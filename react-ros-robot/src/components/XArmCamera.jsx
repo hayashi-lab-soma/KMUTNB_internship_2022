@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Config from "../scripts/config";
-import { Row } from "react-bootstrap";
 
 class XArmCamera extends Component {
     state = {
@@ -74,7 +73,6 @@ class XArmCamera extends Component {
             document.getElementById('image_sub').src = "data:image/jpg;base64," + message.data;
             });
     }
-
 
     render() {
         return (

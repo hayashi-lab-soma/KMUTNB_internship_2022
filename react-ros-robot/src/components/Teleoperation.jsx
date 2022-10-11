@@ -105,7 +105,6 @@ class Teleoperation extends Component {
             }
         });
         cmd_vel.publish(twist)
-
     }
 
     render () {

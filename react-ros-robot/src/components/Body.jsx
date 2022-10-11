@@ -12,7 +12,6 @@ class Body extends Component {
     render() {
         return (
             <Container>
-                {/* <h1>Hello </h1> */}
                 <Router>
                     <Routes>
                         <Route path="/" exact element={<Home/>}></Route>

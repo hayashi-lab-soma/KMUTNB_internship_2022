@@ -10,7 +10,6 @@ class Footer extends Component {
             </Container>
         );
     }
-  
 }
 
 export default Footer;

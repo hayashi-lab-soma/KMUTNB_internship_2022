@@ -7,6 +7,7 @@ const Config = {
   RECONNECTION_TIMER: 3000,
   CMD_VEL_TOPIC: "/cmd_vel",
   MARKER_TOGGLE_TOPIC: "/marker_toggle",
+  GOAL_TOPIC: "/react_goal",
   XARM_TOGGLE_TOPIC: "/xarm_toggle",
   ODOM_TOPIC: "/odom",
   POSE_TOPIC: "/amcl_pose",
