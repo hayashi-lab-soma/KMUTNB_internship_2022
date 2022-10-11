@@ -79,7 +79,7 @@ class GoDeliveryPos extends Component {
                 <Button variant="outline-primary"
                         onClick={this.handleClick}
                         className="text-center mt-3">
-                    Pick Up Position
+                    Delivery Position
                 </Button>
         );
     }
