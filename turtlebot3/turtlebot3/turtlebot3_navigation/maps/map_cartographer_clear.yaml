@@ -1,0 +1,7 @@
+image: ./map_cartographer_clear.pgm
+resolution: 0.050000
+origin: [-4.034893, -2.249763, 0.000000]
+negate: 0
+occupied_thresh: 0.65
+free_thresh: 0.196
+
